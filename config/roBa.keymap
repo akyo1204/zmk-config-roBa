@@ -29,6 +29,20 @@
             bindings = <&kp LANGUAGE_2 &kp COLON &kp N>;
             label = "VIM_N";
         };
+
+        vim_p: vim_p {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp COLON &kp P>;
+            label = "VIM_P";
+        };
+
+        vim_qa: vim_qa {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LANGUAGE_2 &kp COLON &kp Q &kp A>;
+            label = "VIM_QA";
+        };
     };
 
     behaviors {
@@ -50,7 +64,7 @@
 &kp Q  &kp L  &kp U             &kp COMMA                &kp PERIOD                                                          &kp F        &kp W  &lt 5 R  &kp Y  &kp P
 &kp E  &kp I  &kp A             &kp O                    &kp MINUS      &kp LS(LG(S))          &vim_n                        &kp K        &kp T  &kp N    &kp S  &kp H
 &kp Z  &kp X  &kp C             &kp V                    &kp SEMICOLON  &none                  &mt RIGHT_SHIFT LANG_HANGEUL  &kp G        &kp D  &kp M    &kp J  &kp B
-&none  &none  &mt LEFT_WIN DEL  &mt LEFT_ALT LANG_HANJA  &lt 1 ENTER    &mt LCTRL BACKSPACE    &kp BACKSPACE                 &lt 3 SPACE                         &vim_n
+&none  &none  &mt LEFT_WIN DEL  &mt LEFT_ALT LANG_HANJA  &lt 1 ENTER    &mt LCTRL BACKSPACE    &kp BACKSPACE                 &lt 2 SPACE                         &vim_n
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -69,7 +83,7 @@
 
         ARROW {
             bindings = <
-&kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &trans    &trans    &kp UP    &trans     &trans
+&kp LS(N1)  &kp LS(N2)  &kp LS(N3)  &kp LS(N4)  &kp LS(N5)                    &vim_qa   &vim_p    &kp UP    &vim_n     &trans
 &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &trans    &trans  &kp HOME  &kp LEFT  &kp DOWN  &kp RIGHT  &kp END
 &kp EQUAL   &kp GRAVE   &kp BSLH    &kp LBKT    &kp RBKT    &trans    &trans  &trans    &trans    &trans    &trans     &trans
 &trans      &trans      &trans      &trans      &trans      &trans    &trans  &trans                                   &trans
