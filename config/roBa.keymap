@@ -62,8 +62,8 @@
         default_layer {
             bindings = <
 &kp Q           &kp L                  &kp U             &kp COMMA                &kp PERIOD                                                          &kp F        &kp W  &lt 5 R  &kp Y  &kp P
-&mt LSHIFT E    &kp I                  &kp A             &kp O                    &kp MINUS      &kp LS(LG(S))          &vim_n                        &kp K        &kp T  &kp N    &kp S  &mt RSHIFT H
-&kp Z           &kp X                  &kp C             &kp V                    &kp SEMICOLON  &none                  &mt RIGHT_SHIFT LANG_HANGEUL  &kp G        &kp D  &kp M    &kp J  &kp B
+&mt LSHIFT E    &kp I                  &kp A             &kp O                    &kp MINUS      &kp LS(LG(S))          &mt RALT DEL                  &kp K        &kp T  &kp N    &kp S  &mt RSHIFT H
+&kp Z           &kp X                  &kp C             &kp V                    &kp SEMICOLON  &lt 8 ESCAPE           &mt RIGHT_SHIFT LANG_HANGEUL  &kp G        &kp D  &kp M    &kp J  &kp B
 &mt LSHIFT TAB  &mt LEFT_CONTROL CAPS  &mt LEFT_WIN DEL  &mt LEFT_ALT LANG_HANJA  &lt 1 ENTER    &mt LCTRL BACKSPACE    &mt RIGHT_CONTROL BACKSPACE   &lt 2 SPACE                         &mt RIGHT_SHIFT DELETE
             >;
 
@@ -134,6 +134,15 @@
 &kp A   &kp S   &kp D   &kp F   &kp G   &trans    &kp APOS  &kp H   &kp J  &kp K      &kp L    &kp SEMI
 &kp Z   &kp X   &kp C   &kp V   &kp B   &trans    &trans    &kp N   &kp M  &kp COMMA  &kp DOT  &kp FSLH
 &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans                             &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans                          &trans
             >;
         };
     };
